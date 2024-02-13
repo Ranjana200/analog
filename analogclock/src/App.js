@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 
 import './App.css';
 import Clock from './Clock';
+import Digitalclock from './components/Digitalclock';
 
 class App extends Component {
 
@@ -35,16 +36,22 @@ class App extends Component {
        
       
    }    
-  
-
-  render(){
-    const {secondRatio, minuteRatio, hourRatio} = this.state
+   render(){
+    const {secondRatio, minuteRatio, hourRatio} = this.state;
     return (
+        <>
       <Clock secondRatio={secondRatio} minuteRatio={minuteRatio} hourRatio={hourRatio}/>
+      <Digitalclock/>
+      </>
     );
   }
- 
+
+  
+    
+  
 }
+ 
+
 
 
 
